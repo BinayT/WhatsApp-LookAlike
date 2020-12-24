@@ -1,3 +1,5 @@
+import { Switch, Route } from 'react-router-dom';
+
 import './App.scss';
 import Chat from './components/Chat/Chat';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -7,7 +9,11 @@ function App() {
     <div className='app'>
       <div className='app__body'>
         <Sidebar />
-        <Chat />
+        <Switch>
+          <Route path='/rooms/:roomId'>
+            <Chat />
+          </Route>
+        </Switch>
       </div>
     </div>
   );

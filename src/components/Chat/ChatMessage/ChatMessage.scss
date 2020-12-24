@@ -5,6 +5,8 @@
   background: white;
   border-radius: 10px;
   width: fit-content;
+  word-wrap: break-word;
+  max-width: 50%;
   margin-bottom: 30px;
 }
 
@@ -13,4 +15,16 @@
   top: -15px;
   font-size: xx-small;
   font-weight: 800;
+}
+
+.chat__timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+}
+
+.chat__reciever {
+  margin-left: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  background-color: #dcf8c6;
 }

@@ -6,7 +6,8 @@ function ChatMessage({ message }) {
   return (
     <p className={`${true && 'chat__reciever'} chat__message`}>
       <span className='chat__name'>Binay Timilsina</span>
-      hiiiiiiiisaaaaaaaaaaaaaaaaa
+      hiiiiiiiisaaaaaaaaaaaaaaaaahiiiiiiiisaaaaaaaaword-wrap:
+      break-word;word-wrap: break-word;aaaaaaaaahiiiiiiiisaaaaaaaaaaaaaaaaa
       <span className='chat__timestamp'>3:45am</span>
     </p>
   );

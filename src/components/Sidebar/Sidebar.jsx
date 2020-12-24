@@ -10,9 +10,11 @@ import {
 import './Sidebar.scss';
 import SidebarRoom from './SidebarRoom/SidebarRoom';
 import db from '../../firebase';
+import { useStateValue } from '../../StateProvider';
 
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
+  const [{ user }] = useStateValue();
 
   useEffect(() => {
     db.collection('rooms').onSnapshot((snapshot) => {
@@ -28,7 +30,7 @@ function Sidebar() {
   return (
     <div className='sidebar'>
       <div className='sidebar__header'>
-        <Avatar />
+        <Avatar src={user?.photoURL} />
         <div className='sidebar__headerRight'>
           <IconButton>
             <DonutLargeOutlined />

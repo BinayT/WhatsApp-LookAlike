@@ -6,7 +6,11 @@ import './ChatFooter.scss';
 function ChatFooter() {
   const [input, setInput] = useState('');
 
-  const sendMessage = () => {};
+  const sendMessage = (e) => {
+    e.preventDefault();
+    console.log('You typed ' + input);
+    setInput('');
+  };
 
   return (
     <>

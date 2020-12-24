@@ -68,7 +68,7 @@ function Chat() {
         })}
       </div>
       <div className='chat__footer'>
-        <ChatFooter />
+        <ChatFooter roomId={roomId} />
       </div>
     </div>
   );

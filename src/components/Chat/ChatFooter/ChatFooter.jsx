@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { EmojiEmotionsOutlined, MicNoneOutlined } from '@material-ui/icons';
+import firebase from 'firebase';
 
 import './ChatFooter.scss';
+import db from '../../../firebase';
+import { useStateValue } from '../../../StateProvider';
 
-function ChatFooter() {
+function ChatFooter({ roomId }) {
   const [input, setInput] = useState('');
+  const [{ user }] = useStateValue();
 
   const sendMessage = (e) => {
     e.preventDefault();
-    console.log('You typed ' + input);
+    db.collection('rooms').doc(roomId).collection('messages').add({
+      message: input,
+      name: user.displayName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
     setInput('');
   };
 

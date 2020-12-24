@@ -7,6 +7,19 @@ import db from '../../../firebase';
 
 function SidebarChat({ addNewChat, name, id }) {
   const [seed, setSeed] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    if (id) {
+      db.collection('rooms')
+        .doc(id)
+        .collection('messages')
+        .orderBy('timestamp', 'desc')
+        .onSnapshot((snapshot) =>
+          setMessages(snapshot.docs.map((doc) => doc.data()))
+        );
+    }
+  }, [id]);
 
   useEffect(() => {
     setSeed(Math.random() * 232);
@@ -29,7 +42,7 @@ function SidebarChat({ addNewChat, name, id }) {
         />
         <div className='sidebarChat__info'>
           <h2>{name}</h2>
-          <p>Last message...</p>
+          <p>{messages[0]?.message}</p>
         </div>
       </div>
     </Link>

@@ -48,7 +48,12 @@ function Chat() {
         />
         <div className='chat__headerInfo'>
           <h3>{room}</h3>
-          <p>Last activity at: ...</p>
+          <p>
+            Last seen:{' '}
+            {new Date(
+              messages[messages.length - 1]?.timestamp?.toDate()
+            ).toUTCString()}
+          </p>
         </div>
         <div className='chat__headerRight'>
           <IconButton>

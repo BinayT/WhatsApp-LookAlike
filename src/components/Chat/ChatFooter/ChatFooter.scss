@@ -1,0 +1,15 @@
+form {
+  flex: 1;
+  display: flex;
+
+  input {
+    flex: 1;
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+  }
+
+  button {
+    display: none;
+  }
+}

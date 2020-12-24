@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { EmojiEmotionsOutlined, MicNoneOutlined } from '@material-ui/icons';
 
 import './ChatFooter.scss';
 
 function ChatFooter() {
+  const [input, setInput] = useState('');
+
+  const sendMessage = () => {};
+
   return (
-    <div className='footer'>
+    <>
       <EmojiEmotionsOutlined />
       <form>
-        <input type='text' placeholder='Type a message' />
-        <button type='submit'>Send</button>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder='Type a message'
+        />
+        <button type='submit' onClick={sendMessage}>
+          Send
+        </button>
       </form>
       <MicNoneOutlined />
-    </div>
+    </>
   );
 }
 

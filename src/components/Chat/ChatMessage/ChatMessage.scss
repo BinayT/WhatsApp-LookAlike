@@ -1,0 +1,16 @@
+.chat__message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.chat__name {
+  position: absolute;
+  top: -15px;
+  font-size: xx-small;
+  font-weight: 800;
+}

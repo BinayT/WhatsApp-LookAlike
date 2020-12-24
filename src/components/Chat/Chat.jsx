@@ -7,6 +7,7 @@ import {
   MoreVertOutlined,
   SearchOutlined,
 } from '@material-ui/icons';
+import ChatMessage from './ChatMessage/ChatMessage';
 
 function Chat() {
   const [seed, setSeed] = useState('');
@@ -37,7 +38,9 @@ function Chat() {
           </IconButton>
         </div>
       </div>
-      <div className='chat__body'></div>
+      <div className='chat__body'>
+        <ChatMessage />
+      </div>
       <div className='chat__footer'></div>
     </div>
   );

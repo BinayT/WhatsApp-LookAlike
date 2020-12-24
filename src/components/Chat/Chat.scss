@@ -1,6 +1,7 @@
 .chat {
   flex: 0.65;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat__header {
@@ -27,4 +28,13 @@
   display: flex;
   justify-content: space-between;
   min-width: 100px;
+}
+
+.chat__body {
+  flex: 1;
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-position: center;
+  background-repeat: repeat;
+  padding: 30px;
+  overflow-y: scroll;
 }

@@ -49,3 +49,9 @@
     padding: 10px;
   }
 }
+
+.sidebar__chats {
+  flex: 1;
+  overflow-y: scroll;
+  background-color: white;
+}

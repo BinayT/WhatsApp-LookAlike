@@ -4,11 +4,9 @@ import firebase from 'firebase';
 
 import './ChatFooter.scss';
 import db from '../../../firebase';
-import { useStateValue } from '../../../StateProvider';
 
-function ChatFooter({ roomId }) {
+function ChatFooter({ roomId, user }) {
   const [input, setInput] = useState('');
-  const [{ user }] = useStateValue();
 
   const sendMessage = (e) => {
     e.preventDefault();

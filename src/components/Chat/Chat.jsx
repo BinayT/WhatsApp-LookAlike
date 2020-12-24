@@ -11,8 +11,10 @@ import {
 import ChatMessage from './ChatMessage/ChatMessage';
 import ChatFooter from './ChatFooter/ChatFooter';
 import db from '../../firebase';
+import { useStateValue } from '../../StateProvider';
 
 function Chat() {
+  const [{ user }] = useStateValue();
   const { roomId } = useParams();
   const [seed, setSeed] = useState('');
   const [room, setRoom] = useState('');
@@ -68,7 +70,7 @@ function Chat() {
         })}
       </div>
       <div className='chat__footer'>
-        <ChatFooter roomId={roomId} />
+        <ChatFooter roomId={roomId} user={user} />
       </div>
     </div>
   );

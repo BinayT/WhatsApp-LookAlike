@@ -8,7 +8,7 @@ import {
 } from '@material-ui/icons';
 
 import './Sidebar.scss';
-import SidebarChat from './SidebarChat/SidebarChat';
+import SidebarRoom from './SidebarRoom/SidebarRoom';
 
 function Sidebar() {
   return (
@@ -34,9 +34,9 @@ function Sidebar() {
         </div>
       </div>
       <div className='sidebar__chats'>
-        <SidebarChat addNewChat />
-        <SidebarChat />
-        <SidebarChat />
+        <SidebarRoom addNewChat />
+        <SidebarRoom />
+        <SidebarRoom />
       </div>
     </div>
   );

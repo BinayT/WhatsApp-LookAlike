@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar } from '@material-ui/core';
 
-import './SidebarChat.scss';
+import './SidebarRoom.scss';
 
 function SidebarChat({ addNewChat }) {
   const [seed, setSeed] = useState('');
@@ -12,6 +12,8 @@ function SidebarChat({ addNewChat }) {
 
   const createChat = () => {
     const newChatRoom = prompt('Please enter a name for the chat room');
+    if (newChatRoom) {
+    }
   };
 
   return !addNewChat ? (

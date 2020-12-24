@@ -1,5 +1,5 @@
 import './App.scss';
-
+import Chat from './components/Chat/Chat';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className='app'>
       <div className='app__body'>
         <Sidebar />
+        <Chat />
       </div>
     </div>
   );

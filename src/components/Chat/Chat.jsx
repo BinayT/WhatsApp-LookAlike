@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Avatar, IconButton } from '@material-ui/core';
 
 import './Chat.scss';
-import { MoreVertOutlined, SearchOutlined } from '@material-ui/icons';
+import {
+  AttachFileOutlined,
+  MoreVertOutlined,
+  SearchOutlined,
+} from '@material-ui/icons';
 
 function Chat() {
   const [seed, setSeed] = useState('');
@@ -17,9 +21,16 @@ function Chat() {
         <Avatar
           src={`https://avatars.dicebear.com/4.5/api/gridy/${seed}.svg`}
         />
+        <div className='chat__headerInfo'>
+          <h3>Room name</h3>
+          <p>Last activity at: ...</p>
+        </div>
         <div className='chat__headerRight'>
           <IconButton>
             <SearchOutlined />
+          </IconButton>
+          <IconButton>
+            <AttachFileOutlined />
           </IconButton>
           <IconButton>
             <MoreVertOutlined />

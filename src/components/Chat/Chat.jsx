@@ -8,6 +8,7 @@ import {
   SearchOutlined,
 } from '@material-ui/icons';
 import ChatMessage from './ChatMessage/ChatMessage';
+import ChatFooter from './ChatFooter/ChatFooter';
 
 function Chat() {
   const [seed, setSeed] = useState('');
@@ -41,7 +42,9 @@ function Chat() {
       <div className='chat__body'>
         <ChatMessage />
       </div>
-      <div className='chat__footer'></div>
+      <div className='chat__footer'>
+        <ChatFooter />
+      </div>
     </div>
   );
 }

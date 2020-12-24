@@ -38,3 +38,9 @@
   padding: 30px;
   overflow-y: scroll;
 }
+
+.chat__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
